@@ -1,0 +1,116 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.9
+3 info using node@v7.1.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Volumes/DATA/Personal Projects/react-native-beautiful-video-recorder',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/hauvo/.npm/react-native-beautiful-video-recorder/1.0.3/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/hauvo/.npm correctMkdir not in flight; initializing
+10 info lifecycle react-native-beautiful-video-recorder@1.0.3~prepublish: react-native-beautiful-video-recorder@1.0.3
+11 silly lifecycle react-native-beautiful-video-recorder@1.0.3~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/hauvo/.npm/react-native-beautiful-video-recorder/1.0.3/package.tgz',
+12 verbose tar pack   '/Volumes/DATA/Personal Projects/react-native-beautiful-video-recorder' ]
+13 verbose tarball /Users/hauvo/.npm/react-native-beautiful-video-recorder/1.0.3/package.tgz
+14 verbose folder /Volumes/DATA/Personal Projects/react-native-beautiful-video-recorder
+15 verbose addLocalTarball adding from inside cache /Users/hauvo/.npm/react-native-beautiful-video-recorder/1.0.3/package.tgz
+16 verbose correctMkdir /Users/hauvo/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd react-native-beautiful-video-recorder@1.0.3
+18 verbose afterAdd /Users/hauvo/.npm/react-native-beautiful-video-recorder/1.0.3/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/hauvo/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/hauvo/.npm/react-native-beautiful-video-recorder/1.0.3/package/package.json written
+21 silly publish { name: 'react-native-beautiful-video-recorder',
+21 silly publish   version: '1.0.3',
+21 silly publish   description: 'react-native-beautiful-video-recorder ===',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/phuochau/react-native-beautiful-video-recorder.git' },
+21 silly publish   author: { name: 'hauvo' },
+21 silly publish   keywords:
+21 silly publish    [ 'react-native',
+21 silly publish      'react-native-camera',
+21 silly publish      'react-native-components',
+21 silly publish      'react-native-beautiful-video-recorder' ],
+21 silly publish   license: 'MIT',
+21 silly publish   peerDependencies:
+21 silly publish    { 'react-native': '^0.43.3',
+21 silly publish      'react-native-camera': 'git+https://github.com/lwansbrough/react-native-camera.git',
+21 silly publish      'react-native-vector-icons': '^4.0.0',
+21 silly publish      moment: '^2.17.1' },
+21 silly publish   readme: 'react-native-beautiful-video-recorder\n===\n\nThe video recorder component that extends from `react-native-camera`. It works for both iOS & Android.\n\n![Sample](Screenshot.PNG)\n\n\n## Installation\n\n```bash\nnpm i --save react-native-beautiful-video-recorder\nreact-native link\n```\n\nPlease file an issue if you have any trouble!\n## Configuration\n### iOS\nWith iOS 10 and higher you need to add the "Privacy - Camera Usage Description" key to the info.plist of your project. This should be found in \'your_project/ios/your_project/Info.plist\'. Add the following code:\n\n```\n<key>NSCameraUsageDescription</key>\n<string>Your message to user when the camera is accessed for the first time</string>\n\n<!-- Include this only if you are planning to use the microphone for video recording -->\n<key>NSMicrophoneUsageDescription</key>\n<string>Your message to user when the microsphone is accessed for the first time</string>\n```\n\n### Android\nAdd permissions in your Android Manifest (required for video recording feature)\n\n```\n<uses-permission android:name="android.permission.RECORD_AUDIO"/>\n<uses-permission android:name="android.permission.RECORD_VIDEO"/>\n<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />\n<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />\n```\n\n## Usage\n\n```jsx\nimport VideoRecorder from \'react-native-beautiful-video-recorder\';\n....\n\nstart = () => {\n\tthis.videoRecorder.open((data) => {\n\t\tconsole.log(\'captured data\', data);\n\t});\n}\n\nrender() {\n\treturn (\n\t\t<View>\n\t\t\t......\n\t\t  <TouchableOpacity onPress={this.start}>\n\t\t  \t<Text>Start</Text>\n\t\t  </TouchableOpacity>\n\t\t  <VideoRecorder ref={(ref) => { this.videoRecorder = ref; }} />\n\t\t</View>\n\t);\n}\n```\n## Callback Data\n\nparam | Info\n------ | ----\npath | Returns the path of the captured image or video file on disk\nwidth | (currently iOS video only) returns the video file\'s frame width\nheight | (currently iOS video only) returns the video file\'s frame height\nduration | (currently iOS video only) video file duration\nsize | (currently iOS video only) video file size (in bytes)\n\n## Todo\n- Support MP4.\n- Support playback before saving.\n- Switch camera.\n\n## License\nMIT\n\n## Contact\nkevinvovn@gmail.com\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '2d22b5ffe40a7e87c1c912fe105b075cf9ea64e8',
+21 silly publish   bugs: { url: 'https://github.com/phuochau/react-native-beautiful-video-recorder/issues' },
+21 silly publish   homepage: 'https://github.com/phuochau/react-native-beautiful-video-recorder#readme',
+21 silly publish   _id: 'react-native-beautiful-video-recorder@1.0.3',
+21 silly publish   _shasum: '904ce1b07758688a3fd76e062fb5fe519ebf5dd7',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name react-native-beautiful-video-recorder
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'react-native-beautiful-video-recorder',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'react-native-beautiful-video-recorder',
+26 silly mapToRegistry   name: 'react-native-beautiful-video-recorder',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/react-native-beautiful-video-recorder
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/hauvo/.npm/react-native-beautiful-video-recorder/1.0.3/package.tgz
+30 verbose request uri https://registry.npmjs.org/react-native-beautiful-video-recorder
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 1:57:04 PM
+33 verbose request using bearer token for auth
+34 verbose request id 66287ea13ca124e4
+35 http request PUT https://registry.npmjs.org/react-native-beautiful-video-recorder
+36 http 403 https://registry.npmjs.org/react-native-beautiful-video-recorder
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Fri, 21 Apr 2017 06:57:24 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-sin18020-SIN',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1492757825.419397,VS0,VE18810',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/hauvo/.npm/registry.npmjs.org/react-native-beautiful-video-recorder on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.3." : react-native-beautiful-video-recorder
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid react-native-beautiful-video-recorder
+43 verbose cwd /Volumes/DATA/Personal Projects/react-native-beautiful-video-recorder
+44 error Darwin 16.3.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v7.1.0
+47 error npm  v3.10.9
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.3." : react-native-beautiful-video-recorder
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
