@@ -125,6 +125,7 @@ export default class VideoRecorder extends Component {
         style={styles.preview}
         captureAudio
         captureMode={Camera.constants.CaptureMode.video}
+        captureTarget={Camera.constants.CaptureTarget.temp}
         aspect={Camera.constants.Aspect.fill}>
         {this.renderTimer()}
         <View style={[styles.controls, { backgroundColor: isRecording ? 'transparent' : 'rgba(255,255,255,0.4)' }]}>
