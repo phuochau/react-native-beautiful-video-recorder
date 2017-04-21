@@ -103,11 +103,11 @@ export default class VideoRecorder extends Component {
   }
 
   renderTimer() {
-    const { isRecording, time } = this.state;
+    const { isRecording, time, recorded } = this.state;
     return (
       <View>
         {
-          isRecording &&
+          (recorded || isRecording) &&
           <Text style={styles.durationText}>
             <Text style={styles.dotText}>●</Text> {this.convertTimeString(time)}
           </Text>

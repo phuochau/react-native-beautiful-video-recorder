@@ -71,6 +71,10 @@ height | (currently iOS video only) returns the video file's frame height
 duration | (currently iOS video only) video file duration
 size | (currently iOS video only) video file size (in bytes)
 
+## Todo
+- Support playback before saving.
+- Switch camera.
+
 ## License
 
 MIT
