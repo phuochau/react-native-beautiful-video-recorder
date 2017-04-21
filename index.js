@@ -81,7 +81,6 @@ export default class VideoRecorder extends Component {
   stopCapture = () => {
     this.setState({
       isRecording: false,
-      time: 0,
     }, () => {
       this.stopTimer();
       this.camera.stopCapture();
