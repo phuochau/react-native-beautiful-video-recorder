@@ -67,7 +67,8 @@ export default class VideoRecorder extends Component {
       recordedData: null,
       time: 0,
     }, () => {
-      this.camera.capture().then((data) => {
+      this.camera.capture()
+      .then((data) => {
         console.log('video capture', data);
         InteractionManager.runAfterInteractions(() => {
           this.setState({
@@ -75,7 +76,7 @@ export default class VideoRecorder extends Component {
             recordedData: data,
           });
         });
-      });
+      }).catch(err => console.error(err));
     });
   }
 
