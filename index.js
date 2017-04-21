@@ -65,6 +65,7 @@ export default class VideoRecorder extends Component {
       isRecording: true,
       recorded: false,
       recordedData: null,
+      time: 0,
     }, () => {
       this.camera.capture().then((data) => {
         console.log('video capture', data);
