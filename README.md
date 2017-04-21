@@ -72,6 +72,7 @@ duration | (currently iOS video only) video file duration
 size | (currently iOS video only) video file size (in bytes)
 
 ## Todo
+- Support MP4.
 - Support playback before saving.
 - Switch camera.
 
