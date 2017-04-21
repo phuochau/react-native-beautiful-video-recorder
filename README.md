@@ -53,10 +53,10 @@ render() {
 	return (
 		<View>
 			......
-		  <VideoRecorder ref={(ref) => { this.videoRecorder = ref; }} />
 		  <TouchableOpacity onPress={this.start}>
 		  	<Text>Start</Text>
 		  </TouchableOpacity>
+		  <VideoRecorder ref={(ref) => { this.videoRecorder = ref; }} />
 		</View>
 	);
 }
