@@ -61,31 +61,29 @@ export default class VideoRecorder extends Component {
 
   startCapture = () => {
     this.startTimer();
+    this.camera.capture()
+    .then((data) => {
+      console.log('video capture', data);
+      InteractionManager.runAfterInteractions(() => {
+        this.setState({
+          recorded: true,
+          recordedData: data,
+        });
+      });
+    }).catch(err => console.error(err));
     this.setState({
       isRecording: true,
       recorded: false,
       recordedData: null,
       time: 0,
-    }, () => {
-      this.camera.capture()
-      .then((data) => {
-        console.log('video capture', data);
-        InteractionManager.runAfterInteractions(() => {
-          this.setState({
-            recorded: true,
-            recordedData: data,
-          });
-        });
-      }).catch(err => console.error(err));
     });
   }
 
   stopCapture = () => {
+    this.stopTimer();
+    this.camera.stopCapture();
     this.setState({
       isRecording: false,
-    }, () => {
-      this.stopTimer();
-      this.camera.stopCapture();
     });
   }
 
