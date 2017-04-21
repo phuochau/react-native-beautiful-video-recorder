@@ -1,17 +1,25 @@
 
 {
   "name": "react-native-beautiful-video-recorder",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phuochau/react-native-beautiful-video-recorder.git"
+  },
+  "author": "hauvo",
   "keywords": [
-    "react-native"
+    "react-native",
+    "react-native-camera",
+    "react-native-components",
+    "react-native-beautiful-video-recorder"
   ],
-  "author": "",
-  "license": "",
+  "author": "hauvo",
+  "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.43.3",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",

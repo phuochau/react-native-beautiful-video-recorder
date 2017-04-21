@@ -77,5 +77,7 @@ size | (currently iOS video only) video file size (in bytes)
 - Switch camera.
 
 ## License
-
 MIT
+
+## Contact
+kevinvovn@gmail.com
