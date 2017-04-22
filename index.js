@@ -61,18 +61,16 @@ export default class VideoRecorder extends Component {
 
   startCapture = () => {
     this.startTimer();
-    setTimeout(() => {
-      this.camera.capture()
-      .then((data) => {
-        console.log('video capture', data);
-        InteractionManager.runAfterInteractions(() => {
-          this.setState({
-            recorded: true,
-            recordedData: data,
-          });
+    this.camera.capture()
+    .then((data) => {
+      console.log('video capture', data);
+      InteractionManager.runAfterInteractions(() => {
+        this.setState({
+          recorded: true,
+          recordedData: data,
         });
-      }).catch(err => console.error(err));
-    }, 1000);
+      });
+    }).catch(err => console.error(err));
     this.setState({
       isRecording: true,
       recorded: false,
@@ -83,9 +81,7 @@ export default class VideoRecorder extends Component {
 
   stopCapture = () => {
     this.stopTimer();
-    setTimeout(() => {
-      this.camera.stopCapture();
-    }, 1000);
+    this.camera.stopCapture();
     this.setState({
       isRecording: false,
     });
@@ -122,6 +118,12 @@ export default class VideoRecorder extends Component {
   renderContent() {
     const { loading, isRecording, recorded } = this.state;
     if (loading) return <View />;
+    if (recorded) {
+      return (
+        <RecordingButton isRecording={isRecording} onStartPress={this.startCapture}
+          onStopPress={this.stopCapture} />;
+      );
+    };
     return (
       <Camera
         ref={(cam) => { this.camera = cam; }}
@@ -133,7 +135,7 @@ export default class VideoRecorder extends Component {
         {this.renderTimer()}
         <View style={[styles.controls, { backgroundColor: isRecording ? 'transparent' : 'rgba(255,255,255,0.4)' }]}>
           <RecordingButton isRecording={isRecording} onStartPress={this.startCapture}
-            onStopPress={this.stopCapture} />
+            onStopPress={this.stopCapture} />;
           {
             recorded &&
               <TouchableOpacity onPress={this.onSave} style={styles.btnUse}>
