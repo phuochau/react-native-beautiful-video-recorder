@@ -116,17 +116,9 @@ export default class VideoRecorder extends Component {
   }
 
   renderContent() {
-    const { loading, isRecording, recorded } = this.state;
-    if (loading) return <View />;
+    const { isRecording, recorded } = this.state;
     return (
-      <Camera
-        key={'camera'}
-        ref={(cam) => { this.camera = cam; }}
-        style={styles.preview}
-        captureAudio
-        captureMode={Camera.constants.CaptureMode.video}
-        captureTarget={Camera.constants.CaptureTarget.temp}
-        aspect={Camera.constants.Aspect.fill}>
+      <View style={{ flex: 1 }}>
         {this.renderTimer()}
         <View style={[styles.controls, { backgroundColor: isRecording ? 'transparent' : 'rgba(255,255,255,0.4)' }]}>
           <RecordingButton isRecording={isRecording} onStartPress={this.startCapture}
@@ -140,6 +132,23 @@ export default class VideoRecorder extends Component {
               </TouchableOpacity>
           }
         </View>
+      </View>
+    );
+  }
+
+  renderCamera() {
+    const { loading, isRecording, recorded } = this.state;
+    if (loading) return <View />;
+    return (
+      <Camera
+        key={'camera'}
+        ref={(cam) => { this.camera = cam; }}
+        style={styles.preview}
+        captureAudio
+        captureMode={Camera.constants.CaptureMode.video}
+        captureTarget={Camera.constants.CaptureTarget.temp}
+        aspect={Camera.constants.Aspect.fill}>
+        {this.renderContent()}
       </Camera>
     );
   }
@@ -156,7 +165,7 @@ export default class VideoRecorder extends Component {
           </TouchableWithoutFeedback>
           <View style={styles.container}>
             <View style={styles.content}>
-              {this.renderContent()}
+              {this.renderCamera()}
             </View>
             <TouchableOpacity onPress={this.close} style={styles.buttonClose}>
               <Icon name="close" size={32} color={'white'} />
