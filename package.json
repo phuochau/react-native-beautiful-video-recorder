@@ -1,7 +1,7 @@
 
 {
   "name": "react-native-beautiful-video-recorder",
-  "version": "1.1",
+  "version": "1.1.1",
   "description": "",
   "main": "./lib",
   "scripts": {
