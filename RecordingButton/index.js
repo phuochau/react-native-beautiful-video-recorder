@@ -12,6 +12,7 @@ export default class RecordingButton extends Component {
     isRecording: PropTypes.bool,
     onStartPress: PropTypes.func,
     onStopPress: PropTypes.func,
+    style: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
   }
 
   componentWillUpdate() {
@@ -20,7 +21,7 @@ export default class RecordingButton extends Component {
 
   renderRecording() {
     return (
-      <TouchableOpacity onPress={this.props.onStopPress}
+      <TouchableOpacity style={this.props.style} onPress={this.props.onStopPress}
         style={[styles.buttonContainer, styles.buttonStopContainer]}>
         <View style={styles.buttonStop}></View>
       </TouchableOpacity>
@@ -29,7 +30,7 @@ export default class RecordingButton extends Component {
 
   renderWaiting() {
     return (
-      <TouchableOpacity onPress={this.props.onStartPress} style={styles.buttonContainer}>
+      <TouchableOpacity onPress={this.props.onStartPress} style={[styles.buttonContainer, this.props.style]}>
         <View style={styles.circleInside}></View>
       </TouchableOpacity>
     );

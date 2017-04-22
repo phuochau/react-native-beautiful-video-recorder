@@ -60,30 +60,34 @@ export default class VideoRecorder extends Component {
   }
 
   startCapture = () => {
-    // this.camera.capture()
-    // .then((data) => {
-    //   console.log('video capture', data);
-    //   this.setState({
-    //     recorded: true,
-    //     recordedData: data,
-    //   });
-    // }).catch(err => console.error(err));
     InteractionManager.runAfterInteractions(() => {
-      this.startTimer();
-      this.setState({
-        isRecording: true,
-        recorded: false,
-        recordedData: null,
-        time: 0,
+      this.camera.capture()
+      .then((data) => {
+        console.log('video capture', data);
+        this.setState({
+          recorded: true,
+          recordedData: data,
+        });
+      }).catch(err => console.error(err));
+      setTimeout(() => {
+        this.startTimer();
+        this.setState({
+          isRecording: true,
+          recorded: false,
+          recordedData: null,
+          time: 0,
+        });
       });
     });
   }
 
   stopCapture = () => {
-    this.stopTimer();
-    this.camera.stopCapture();
-    this.setState({
-      isRecording: false,
+    InteractionManager.runAfterInteractions(() => {
+      this.stopTimer();
+      this.camera.stopCapture();
+      this.setState({
+        isRecording: false,
+      });
     });
   }
 
@@ -118,10 +122,10 @@ export default class VideoRecorder extends Component {
   renderContent() {
     const { isRecording, recorded } = this.state;
     return (
-      <View style={{ flex: 1 }}>
+      <View style={styles.controlLayer}>
         {this.renderTimer()}
         <View style={[styles.controls, { backgroundColor: isRecording ? 'transparent' : 'rgba(255,255,255,0.4)' }]}>
-          <RecordingButton isRecording={isRecording} onStartPress={this.startCapture}
+          <RecordingButton style={styles.recodingButton} isRecording={isRecording} onStartPress={this.startCapture}
             onStopPress={this.stopCapture} />
           {
             recorded &&
@@ -137,11 +141,9 @@ export default class VideoRecorder extends Component {
   }
 
   renderCamera() {
-    const { loading, isRecording, recorded } = this.state;
-    if (loading) return <View />;
+    const { isRecording, recorded } = this.state;
     return (
       <Camera
-        key={'camera'}
         ref={(cam) => { this.camera = cam; }}
         style={styles.preview}
         captureAudio
@@ -154,8 +156,8 @@ export default class VideoRecorder extends Component {
   }
 
   render() {
-    const { isOpen } = this.state;
-
+    const { loading, isOpen } = this.state;
+    if (loading) return <View />;
     return (
       <Modal visible={isOpen} transparent animationType="fade"
         onRequestClose={this.close}>

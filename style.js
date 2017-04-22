@@ -43,6 +43,14 @@ export default StyleSheet.create({
     width,
     height,
   },
+  controlLayer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+    backgroundColor: 'transparent',
+  },
   controls: {
     position: 'absolute',
     bottom: 0,
@@ -51,6 +59,9 @@ export default StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: 'rgba(255,255,255,0.4)',
     width,
+  },
+  recodingButton: {
+    marginBottom: Platform.OS === 'ios' ? 0 : 20,
   },
   durationText: {
     marginTop: Platform.OS === 'ios' ? 20 : 20,
