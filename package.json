@@ -1,9 +1,9 @@
 
 {
   "name": "react-native-beautiful-video-recorder",
-  "version": "1.0.4",
+  "version": "1.1",
   "description": "",
-  "main": "index.js",
+  "main": "./lib",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
     "react-native": "^0.43.3",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-vector-icons": "^4.0.0",
-    "moment": "^2.17.1"
+    "moment": "^2.17.1",
+    "react-native-spinkit": "^1.0.2"
   }
 }

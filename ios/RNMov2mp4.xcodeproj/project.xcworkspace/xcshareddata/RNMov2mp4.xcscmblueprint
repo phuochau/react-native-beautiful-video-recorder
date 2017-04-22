@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "D1DF6C15F0E6FC0F87A5956D67DB950DB3825AFE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D1DF6C15F0E6FC0F87A5956D67DB950DB3825AFE" : 9223372036854775807,
+    "828240D890F84F56D274CF8EF6326640720D3A73" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5568736F-3AE4-4078-8094-528C520CC4C1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D1DF6C15F0E6FC0F87A5956D67DB950DB3825AFE" : "react-native-beautiful-video-recorder\/",
+    "828240D890F84F56D274CF8EF6326640720D3A73" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "RNMov2mp4",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "lib\/Mov2mp4\/ios\/RNMov2mp4.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.com:littlelives-littlestories\/react-native-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "828240D890F84F56D274CF8EF6326640720D3A73"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/phuochau\/react-native-beautiful-video-recorder.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D1DF6C15F0E6FC0F87A5956D67DB950DB3825AFE"
+    }
+  ]
+}
