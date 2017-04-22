@@ -121,9 +121,9 @@ export default class VideoRecorder extends Component {
     if (recorded) {
       return (
         <RecordingButton isRecording={isRecording} onStartPress={this.startCapture}
-          onStopPress={this.stopCapture} />;
+          onStopPress={this.stopCapture} />
       );
-    };
+    }
     return (
       <Camera
         ref={(cam) => { this.camera = cam; }}
@@ -135,7 +135,7 @@ export default class VideoRecorder extends Component {
         {this.renderTimer()}
         <View style={[styles.controls, { backgroundColor: isRecording ? 'transparent' : 'rgba(255,255,255,0.4)' }]}>
           <RecordingButton isRecording={isRecording} onStartPress={this.startCapture}
-            onStopPress={this.stopCapture} />;
+            onStopPress={this.stopCapture} />
           {
             recorded &&
               <TouchableOpacity onPress={this.onSave} style={styles.btnUse}>
