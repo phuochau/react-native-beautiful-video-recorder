@@ -5,6 +5,9 @@ The video recorder component that extends from `react-native-camera`. It works f
 
 ![Sample](Screenshot.PNG)
 
+## Features:
+- Record video on iOS and Android.
+- Convert MOV to MP4 on iOS. So both Android & iOS will return MP4 format.
 
 ## Installation
 
@@ -72,7 +75,6 @@ duration | (currently iOS video only) video file duration
 size | (currently iOS video only) video file size (in bytes)
 
 ## Todo
-- Support MP4.
 - Support playback before saving.
 - Switch camera.
 
