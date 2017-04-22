@@ -21,8 +21,8 @@ export default class RecordingButton extends Component {
 
   renderRecording() {
     return (
-      <TouchableOpacity style={this.props.style} onPress={this.props.onStopPress}
-        style={[styles.buttonContainer, styles.buttonStopContainer]}>
+      <TouchableOpacity onPress={this.props.onStopPress}
+        style={[styles.buttonContainer, styles.buttonStopContainer, this.props.style]}>
         <View style={styles.buttonStop}></View>
       </TouchableOpacity>
     );
