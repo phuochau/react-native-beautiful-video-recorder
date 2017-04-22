@@ -61,7 +61,9 @@ export default class VideoRecorder extends Component {
 
   startCapture = () => {
     this.startTimer();
-    this.camera.capture()
+    setTimeout(() => {
+      this.camera.capture();
+    }, 1000);
     .then((data) => {
       console.log('video capture', data);
       InteractionManager.runAfterInteractions(() => {
@@ -81,7 +83,9 @@ export default class VideoRecorder extends Component {
 
   stopCapture = () => {
     this.stopTimer();
-    this.camera.stopCapture();
+    setTimeout(() => {
+      this.camera.stopCapture();
+    }, 1000);
     this.setState({
       isRecording: false,
     });
