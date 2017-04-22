@@ -60,22 +60,24 @@ export default class VideoRecorder extends Component {
   }
 
   startCapture = () => {
-    this.startTimer();
-    this.camera.capture()
-    .then((data) => {
-      console.log('video capture', data);
-      InteractionManager.runAfterInteractions(() => {
-        this.setState({
-          recorded: true,
-          recordedData: data,
+    InteractionManager.runAfterInteractions(() => {
+      this.startTimer();
+      this.camera.capture()
+      .then((data) => {
+        console.log('video capture', data);
+        InteractionManager.runAfterInteractions(() => {
+          this.setState({
+            recorded: true,
+            recordedData: data,
+          });
         });
+      }).catch(err => console.error(err));
+      this.setState({
+        isRecording: true,
+        recorded: false,
+        recordedData: null,
+        time: 0,
       });
-    }).catch(err => console.error(err));
-    this.setState({
-      isRecording: true,
-      recorded: false,
-      recordedData: null,
-      time: 0,
     });
   }
 
@@ -118,12 +120,6 @@ export default class VideoRecorder extends Component {
   renderContent() {
     const { loading, isRecording, recorded } = this.state;
     if (loading) return <View />;
-    if (recorded) {
-      return (
-        <RecordingButton isRecording={isRecording} onStartPress={this.startCapture}
-          onStopPress={this.stopCapture} />
-      );
-    }
     return (
       <Camera
         ref={(cam) => { this.camera = cam; }}
