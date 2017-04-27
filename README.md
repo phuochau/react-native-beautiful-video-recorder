@@ -59,7 +59,7 @@ render() {
 		  <TouchableOpacity onPress={this.start}>
 		  	<Text>Start</Text>
 		  </TouchableOpacity>
-		  <VideoRecorder ref={(ref) => { this.videoRecorder = ref; }} />
+		  <VideoRecorder ref={(ref) => { this.videoRecorder = ref; }} compressQuality={'medium'} /> // quality will be 'low', 'medium' or 'high'
 		</View>
 	);
 }
