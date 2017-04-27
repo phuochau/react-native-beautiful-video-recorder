@@ -26,6 +26,6 @@
     "react-native-vector-icons": "^4.0.0",
     "moment": "^2.17.1",
     "react-native-spinkit": "^1.0.2",
-    "react-native-compress": "^1.0.2",
+    "react-native-compress": "^1.0.2"
   }
 }
