@@ -20,11 +20,11 @@
   "license": "MIT",
   "peerDependencies": {
     "moment": "^2.17.1",
+    "prop-types": "^15.6.0",
     "react-native": "^0.43.3",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
     "react-native-compress": "^1.0.2",
     "react-native-spinkit": "^1.0.2",
-    "react-native-vector-icons": "^4.0.0",
-    "prop-types": "^15.6.0"
+    "react-native-vector-icons": "^4.0.0"
   }
 }
