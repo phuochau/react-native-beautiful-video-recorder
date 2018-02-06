@@ -1,4 +1,3 @@
-
 {
   "name": "react-native-beautiful-video-recorder",
   "version": "1.2.0",
@@ -18,14 +17,14 @@
     "react-native-components",
     "react-native-beautiful-video-recorder"
   ],
-  "author": "hauvo",
   "license": "MIT",
   "peerDependencies": {
+    "moment": "^2.17.1",
     "react-native": "^0.43.3",
     "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
-    "react-native-vector-icons": "^4.0.0",
-    "moment": "^2.17.1",
+    "react-native-compress": "^1.0.2",
     "react-native-spinkit": "^1.0.2",
-    "react-native-compress": "^1.0.2"
+    "react-native-vector-icons": "^4.0.0",
+    "prop-types": "^15.6.0"
   }
 }
