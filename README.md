@@ -19,7 +19,7 @@ react-native link
 Please file an issue if you have any trouble!
 ## Configuration
 ### iOS
-With iOS 10 and higher you need to add the "Privacy - Camera Usage Description" key to the info.plist of your project. This should be found in 'your_project/ios/your_project/Info.plist'. Add the following code:
+With iOS 10 and higher you need to add the "Privacy - Camera Usage Description" key to the info.plist of your project. This should be found in `your_project/ios/your_project/Info.plist`. Add the following code:
 
 ```
 <key>NSCameraUsageDescription</key>
