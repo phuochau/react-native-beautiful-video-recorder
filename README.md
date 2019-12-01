@@ -34,8 +34,8 @@ With iOS 10 and higher you need to add the "Privacy - Camera Usage Description" 
 Add permissions in your Android Manifest (required for video recording feature)
 
 ```
+<uses-permission android:name="android.permission.CAMERA"/>
 <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-<uses-permission android:name="android.permission.RECORD_VIDEO"/>
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 ```
