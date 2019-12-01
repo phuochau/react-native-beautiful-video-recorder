@@ -18,13 +18,15 @@
     "react-native-beautiful-video-recorder"
   ],
   "license": "MIT",
+  "dependencies": {
+    "moment": "2.24.0",
+    "react-native-camera": "3.13.0",
+    "react-native-compress": "1.0.2",
+    "react-native-spinkit": "1.5.0",
+    "react-native-vector-icons": "6.6.0"
+  },
   "peerDependencies": {
-    "moment": "^2.17.1",
-    "prop-types": "^15.6.0",
-    "react-native": "^0.43.3",
-    "react-native-camera": "git+https://github.com/lwansbrough/react-native-camera.git",
-    "react-native-compress": "^1.0.2",
-    "react-native-spinkit": "^1.0.2",
-    "react-native-vector-icons": "^4.0.0"
+    "react": "16.9.0",
+    "react-native": "0.61.5"
   }
 }
