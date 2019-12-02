@@ -76,13 +76,17 @@ recordOptions | https://github.com/react-native-community/react-native-camera/bl
 
 ## Callback Data
 
-param | Info
------- | ----
-path | Returns the path of the captured image or video file on disk
-width | (currently iOS video only) returns the video file's frame width
-height | (currently iOS video only) returns the video file's frame height
-duration | (currently iOS video only) video file duration
-size | (currently iOS video only) video file size (in bytes)
+The calback will be fulfilled with an object with some of the following properties:
+
+- `uri`: (string) the path to the video saved on your app's cache directory.
+
+- `videoOrientation`: (number) orientation of the video
+
+- `deviceOrientation`: (number) orientation of the device
+
+- `iOS` `codec`: the codec of the recorded video. One of `RNCamera.Constants.VideoCodec`
+
+- `isRecordingInterrupted`: (boolean) whether the app has been minimized while recording
 
 ## Todo
 - Support playback before saving.
