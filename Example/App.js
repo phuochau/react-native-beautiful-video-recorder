@@ -26,7 +26,7 @@ const App: () => React$Node = () => {
   const videoRecorder = useRef(null)
   function startRecorder () {
     if (videoRecorder && videoRecorder.current) {
-      videoRecorder.current.open((data) => {
+      videoRecorder.current.open({ maxLength: 30 }, (data) => {
         console.log('captured data', data);
       })
     }

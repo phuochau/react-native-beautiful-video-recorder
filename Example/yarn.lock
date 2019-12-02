@@ -5162,7 +5162,7 @@ prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.3"
 
-prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -5232,44 +5232,19 @@ react-is@^16.8.1, react-is@^16.8.4, react-is@^16.9.0:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.12.0.tgz#2cc0fe0fba742d97fd527c42a13bec4eeb06241c"
   integrity sha512-rPCkf/mWBtKc97aLL9/txD8DZdemK0vkA3JMLShjlJB3Pj3s+lpf1KaBzMfQrAmhMQB0n1cU/SUGgKKBCe837Q==
 
-"react-native-beautiful-video-recorder@file:..":
-  version "1.2.0"
-  dependencies:
-    moment "2.24.0"
-    react-native-camera "3.13.0"
-    react-native-compress "1.0.2"
-    react-native-spinkit "1.5.0"
-    react-native-vector-icons "6.6.0"
-
 "react-native-beautiful-video-recorder@file:../":
-  version "1.2.0"
+  version "2.0.0"
   dependencies:
     moment "2.24.0"
-    react-native-camera "3.13.0"
-    react-native-compress "1.0.2"
-    react-native-spinkit "1.5.0"
-    react-native-vector-icons "6.6.0"
 
-react-native-camera@3.13.0:
-  version "3.13.0"
-  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-3.13.0.tgz#999741e3b5e56426ee678055d0bc4e57e90631cc"
-  integrity sha512-iMB8ODN1abcuUiWy62+YD2ae/p/ADMOGcFi+41KV7FpNKjbIM8fYbIx2oLyljTxXvBPL5pMovqW2aw5DEwf3IQ==
+react-native-camera@^3.13.1:
+  version "3.13.1"
+  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-3.13.1.tgz#016a011ca264d7044e2f1ad11fc624b90020aeb9"
+  integrity sha512-HXCo75sFYOJRqtbiG12ttoG6K4UdS1mfOwu6NoQmxj6IV2KrNgdOYO4YTyLymGUXNs3LyOWpJskVvCRupoFA3A==
   dependencies:
     prop-types "^15.6.2"
 
-react-native-compress@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-native-compress/-/react-native-compress-1.0.2.tgz#202fdf71d6ca3938c4c3a0a54158eb68d4debf6b"
-  integrity sha1-IC/fcdbKOTjEw6ClQVjraNTev2s=
-
-react-native-spinkit@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/react-native-spinkit/-/react-native-spinkit-1.5.0.tgz#598b4b138b1e95cc232dfb2fc7e64dcdd45de574"
-  integrity sha512-HHOIH3Lq+oFsmhPBO9Y2hcxkKNm955gmNBaFgNUrshhGU4Dqp8qWj3bbVrwjBJOC5W+cvHSqyTsfgmpMPoUoTA==
-  dependencies:
-    prop-types "^15.5.8"
-
-react-native-vector-icons@6.6.0:
+react-native-vector-icons@^6.6.0:
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-6.6.0.tgz#66cf004918eb05d90778d64bd42077c1800d481b"
   integrity sha512-MImKVx8JEvVVBnaShMr7/yTX4Y062JZMupht1T+IEgbqBj4aQeQ1z2SH4VHWKNtWtppk4kz9gYyUiMWqx6tNSw==

@@ -7,14 +7,15 @@ The video recorder component that extends from `react-native-camera`. It works f
 
 ## Features:
 - Record video on iOS and Android.
-- Convert MOV to MP4 on iOS. So both Android & iOS will return MP4 format.
+- Support `cameraOptions` and `recordAsyncOptions` from `react-native-camera`
 
 ## Installation
 
 ```bash
-npm i --save react-native-beautiful-video-recorder
-react-native link
+yarn add react-native-beautiful-video-recorder react-native-camera react-native-vector-icons
 ```
+
+Follow `react-native-camera` & `react-native-vector-icons` for linking native libraries.
 
 Please file an issue if you have any trouble!
 ## Configuration
@@ -47,7 +48,8 @@ import VideoRecorder from 'react-native-beautiful-video-recorder';
 ....
 
 start = () => {
-	this.videoRecorder.open((data) => {
+	// 30 seconds
+	this.videoRecorder.open({ maxLength: 30 },(data) => {
 		console.log('captured data', data);
 	});
 }
@@ -59,11 +61,19 @@ render() {
 		  <TouchableOpacity onPress={this.start}>
 		  	<Text>Start</Text>
 		  </TouchableOpacity>
-		  <VideoRecorder ref={(ref) => { this.videoRecorder = ref; }} compressQuality={'medium'} /> // quality will be 'low', 'medium' or 'high'
+		  <VideoRecorder ref={(ref) => { this.videoRecorder = ref; }} />
 		</View>
 	);
 }
 ```
+
+## Properties
+
+param | Info
+------ | ----
+cameraOptions | https://github.com/react-native-community/react-native-camera/blob/master/docs/RNCamera.md
+recordOptions | https://github.com/react-native-community/react-native-camera/blob/master/docs/RNCamera.md
+
 ## Callback Data
 
 param | Info

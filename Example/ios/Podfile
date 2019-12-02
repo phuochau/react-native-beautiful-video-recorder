@@ -35,7 +35,7 @@ target 'Example' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
-  pod 'RNMov2mp4', :path => '../node_modules/react-native-beautiful-video-recorder/ios'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'ExampleTests' do
     inherit! :search_paths
